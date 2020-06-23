@@ -29,9 +29,11 @@ public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, 
 
     @Override
     public Double priceFor(Visitor visitor) {
-        if (visitor.getHeight() > 1.99)
-            return this.getPrice() * 2.00;
-            else return this.getPrice();
+        if (visitor.getHeight() > 2.00) {
+            price = price *2;
+        }
+        else price = price;
+        return price;
     }
 
 
